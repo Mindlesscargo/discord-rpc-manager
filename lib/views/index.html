@@ -2,10 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <title>Electron Discord Rich Presence Manager</title>
+    <link rel="stylesheet" href="../styles/home.css">
 </head>
 <body>
-    <h1>Rich Presence Manager</h1>
+    <nav>
+        <ul class="navbar"> 
+            <li class="navitem"><a href="index.html">Home</a></li>
+            <li class="navitem"><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+    <div id="inputs">
+        <div id="textlines">
+            <label for="textLineOne">Line 1</label>
+            <input id="textLineOne">
+
+            <labe for="textLineTwo">Line 2</labe>
+            <input id="textLineTwo">
+        </div>
+
+        <div id="imageinputs">
+            <div id="imageone">
+                <label for="imageKeyOne">Large Image Key</label>
+                <input id="imageKeyOne">
+                <label for="imageAltOne">Large Image Alt</label>
+                <input id="imageAltOne">
+            </div>
+
+            <div id='imagetwo'>
+                <label for="imageKeyTwo">Small Image Key</label>
+                <input id="imageKeyTwo">
+                <label for="imageAltTwo">Small Image Alt</label>
+                <input id="imageAltTwo">
+            </div>
+        </div>
+        <label for="timecheckbox">Include Timestamp?</label>
+        <input type="checkbox" id="timecheckbox">
+    </div>
+    <button onclick="">Update RPC</button>
 </body>
 </html>
