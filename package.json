@@ -17,6 +17,7 @@
     "eslint-plugin-promise": "^4.2.1"
   },
   "dependencies": {
+    "discord-rpc": "^3.1.4",
     "electron": "^11.1.1"
   }
 }

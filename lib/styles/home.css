@@ -5,10 +5,6 @@ body {
     background-color: #1e2124;
 }
 
-label {
-    display: block;
-}
-
 ul.navbar {
     list-style-type: none;
     font-weight: bold;
@@ -47,4 +43,9 @@ ul.navbar {
     padding: 10px 10px;
     display: flex;
     align-content: center;
+}
+
+#partyinput {
+    display: flex;
+    flex-direction: row;
 }

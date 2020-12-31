@@ -14,33 +14,43 @@
         </ul>
     </nav>
 
-    <div id="inputs">
-        <div id="textlines">
-            <label for="textLineOne">Line 1</label>
-            <input id="textLineOne">
-
-            <labe for="textLineTwo">Line 2</labe>
-            <input id="textLineTwo">
-        </div>
-
-        <div id="imageinputs">
-            <div id="imageone">
-                <label for="imageKeyOne">Large Image Key</label>
-                <input id="imageKeyOne">
-                <label for="imageAltOne">Large Image Alt</label>
-                <input id="imageAltOne">
+    <form action="">
+        <div id="inputs">
+            <div id="textlines">
+                <label for="textLineOne">Details</label>
+                <input id="textLineOne">
+    
+                <labe for="textLineTwo">State</labe>
+                <input id="textLineTwo">
             </div>
-
-            <div id='imagetwo'>
-                <label for="imageKeyTwo">Small Image Key</label>
-                <input id="imageKeyTwo">
-                <label for="imageAltTwo">Small Image Alt</label>
-                <input id="imageAltTwo">
+    
+            <div id="imageinputs">
+                <div id="imageone">
+                    <label for="imageKeyOne">Large Image Key</label>
+                    <input id="imageKeyOne">
+                    <label for="imageAltOne">Large Image Alt</label>
+                    <input id="imageAltOne">
+                </div>
+    
+                <div id='imagetwo'>
+                    <label for="imageKeyTwo">Small Image Key</label>
+                    <input id="imageKeyTwo">
+                    <label for="imageAltTwo">Small Image Alt</label>
+                    <input id="imageAltTwo">
+                </div>
             </div>
+            <div id="partyinput">
+                <label for="partysize">Party Size</label>
+                <input type="number" id="partysize" min="0">
+    
+                <label for="partylimit">Party Max</label>
+                <input type="number" id="partylimit">
+            </div>
+            <label for="timecheckbox">Include Timestamp?</label>
+            <input type="checkbox" id="timecheckbox">
         </div>
-        <label for="timecheckbox">Include Timestamp?</label>
-        <input type="checkbox" id="timecheckbox">
-    </div>
-    <button onclick="">Update RPC</button>
+        <button type="submit">Update RPC</button>
+        <button type="reset">Reset </button>
+    </form>
 </body>
 </html>
