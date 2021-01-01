@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <title>Electron Discord Rich Presence Manager</title>
     <link rel="stylesheet" href="../styles/home.css">
+    <script  type="text/javascript" src="../scripts/home.js"></script>
 </head>
 <body>
     <nav>
@@ -14,14 +15,14 @@
         </ul>
     </nav>
 
-    <form action="">
+    <form onsubmit="return false">
         <div id="inputs">
             <div id="textlines">
-                <label for="textLineOne">Details</label>
-                <input id="textLineOne">
+                <label for="detail">Details</label>
+                <input id="detail">
     
-                <labe for="textLineTwo">State</labe>
-                <input id="textLineTwo">
+                <labe for="state">State</labe>
+                <input id="state">
             </div>
     
             <div id="imageinputs">
@@ -32,25 +33,26 @@
                     <input id="imageAltOne">
                 </div>
     
-                <div id='imagetwo'>
+                <!-- <div id='imagetwo'>
                     <label for="imageKeyTwo">Small Image Key</label>
                     <input id="imageKeyTwo">
                     <label for="imageAltTwo">Small Image Alt</label>
                     <input id="imageAltTwo">
-                </div>
+                </div> -->
             </div>
             <div id="partyinput">
-                <label for="partysize">Party Size</label>
-                <input type="number" id="partysize" min="0">
+                <label for="partySize">Party Size</label>
+                <input type="number" id="partySize" min="1" max="1">
     
-                <label for="partylimit">Party Max</label>
-                <input type="number" id="partylimit">
+                <label for="partyLimit">Party Max</label>
+                <input type="number" id="partyLimit" onchange="changeMax()" min="1">
             </div>
-            <label for="timecheckbox">Include Timestamp?</label>
-            <input type="checkbox" id="timecheckbox">
+            <label for="timeCheckbox">Include Timestamp?</label>
+            <input type="checkbox" id="timeCheckbox">
         </div>
-        <button type="submit">Update RPC</button>
+        <button type="submit" onclick="submitClicked(this)">Update RPC</button>
         <button type="reset">Reset </button>
     </form>
+    <button onclick="updateRpc()">Apply Rich Presence</button>
 </body>
 </html>

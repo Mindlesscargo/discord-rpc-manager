@@ -1,0 +1,32 @@
+body {
+    text-decoration: none;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #1e2124;
+}
+
+ul.navbar {
+    list-style-type: none;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: #340082;
+}
+
+.navitem {
+    float: left;
+}
+
+.navitem a{
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 15px
+}
+
+
+.navitem a:hover{
+    background-color: #26015e;
+}
