@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/settings.css">
-    <title>settings</title>
+    <script type="text/javascript" src="../scripts/settings.js"></script>
+    <title>Settings</title>
 </head>
 <body>
     <nav>
@@ -13,5 +14,16 @@
             <li class="navitem"><a href="settings.html">Settings</a></li>
         </ul>
     </nav>
+    
+    <div>
+        <div>
+            <label for="clientinput">Client ID</label>
+            <input id="clientinput">
+        </div>
+
+        <div>
+            <button onclick="saveClient()" id="save">Save</button>
+        </div>
+    </div>
 </body>
 </html>

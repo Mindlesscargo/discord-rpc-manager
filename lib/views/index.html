@@ -8,6 +8,12 @@
     <script  type="text/javascript" src="../scripts/home.js"></script>
 </head>
 <body>
+    <script>
+        const { ipcRenderer } = require('electron')
+        ipcRenderer.on('idError', (event, message) => {
+            document.getElementById('disconnect').disabled = true
+        })
+    </script>
     <nav>
         <ul class="navbar"> 
             <li class="navitem"><a href="index.html">Home</a></li>
@@ -15,67 +21,95 @@
         </ul>
     </nav>
 
-    <form onsubmit="return false">
-        <div id="inputs">
-            <div id="textlines" class="inputcontainer">
-                <div class="inputitem">
-                    <label for="detail">Details</label>
-                    <input id="detail">
+    <div class="flexrow">
+        <form onsubmit="return false">
+            <div id="inputs">
+                <div id="textlines" class="inputcontainer">
+                    <div class="inputitem">
+                        <label for="detail">Details</label>
+                        <input id="detail">
+                    </div>
+        
+                    <div class="inputitem">
+                        <label for="state">State</label>
+                        <input id="state">
+                    </div>
                 </div>
     
-                <div class="inputitem">
-                    <label for="state">State</label>
-                    <input id="state">
-                </div>
-            </div>
-
-            <div id="imageone" class="inputcontainer">
-                <div class="inputitem">
-                    <label for="imageKeyOne">Large Image Key</label>
-                    <input id="imageKeyOne">
-                </div>
-                <div class="inputitem">
-                    <label for="imageAltOne">Large Image Text</label>
-                    <input id="imageAltOne">
-                </div>
-            </div>
-
-            <div id="imagetwo" class="inputcontainer">
-                <div class="inputitem">
-                    <label for="imageKeyTwo">Small Image Key</label>
-                    <input id="imageKeyTwo">
-                </div>
-                <div class="inputitem">
-                    <label for="imageAltTwo">Small Image Text</label>
-                    <input id="imageAltTwo">
-                </div>
-            </div>
-
-            <div id="partyinput" class="inputcontainer">
-                <div class="inputitem">
-                    <label for="partySize">Party Size</label>
-                    <input type="number" id="partySize" min="1" max="1">
+                <div id="imageone" class="inputcontainer">
+                    <div class="inputitem">
+                        <label for="imageKeyOne">Large Image Key</label>
+                        <input id="imageKeyOne">
+                    </div>
+                    <div class="inputitem">
+                        <label for="imageAltOne">Large Image Text</label>
+                        <input id="imageAltOne">
+                    </div>
                 </div>
     
-                <div class="inputitem">
-                    <label for="partyLimit">Party Max</label>
-                    <input type="number" id="partyLimit" onchange="changeMax()" min="1">
+                <div id="imagetwo" class="inputcontainer">
+                    <div class="inputitem">
+                        <label for="imageKeyTwo">Small Image Key</label>
+                        <input id="imageKeyTwo">
+                    </div>
+                    <div class="inputitem">
+                        <label for="imageAltTwo">Small Image Text</label>
+                        <input id="imageAltTwo">
+                    </div>
+                </div>
+    
+                <div id="partyinput" class="inputcontainer">
+                    <div class="inputitem">
+                        <label for="partySize">Party Size</label>
+                        <input type="number" id="partySize" min="1" max="1">
+                    </div>
+        
+                    <div class="inputitem">
+                        <label for="partyLimit">Party Max</label>
+                        <input type="number" id="partyLimit" onchange="changeMax()" min="1">
+                    </div>
+                </div>
+    
+                <label for="timeCheckbox">Include Timestamp?</label>
+                <input type="checkbox" id="timeCheckbox">
+    
+                <div class="inputcontainer">
+                    <button type="submit" onclick="submitClicked(this)" class="button">Update RPC</button>
+                    <button type="reset" class="button">Reset</button>
+                </div>
+    
+                <div id="applybuttons">
+                    <button onclick="updateRpc()" class="button" style="background-color: #34eb83;">Start Rich Presence</button>
+                    <button onclick="disconnectRpc()" class="button" style="background-color: #db4040" id="disconnect" disabled=true>Disconnect Rich Presence</button>
                 </div>
             </div>
-
-            <label for="timeCheckbox">Include Timestamp?</label>
-            <input type="checkbox" id="timeCheckbox">
-
-            <div class="inputcontainer">
-                <button type="submit" onclick="submitClicked(this)" class="button">Update RPC</button>
-                <button type="reset" class="button">Reset</button>
+        </form>
+    
+        <div class="backgroundpreview">
+            <div class="profilepreview">
+                <img src="../../public/images/Yellow.png" alt="Default Discord Profile Picture" width="90px" height="90px">
+                <p id="nickname">Nickname</p>
+                <p id="username">Username#1234</p>
             </div>
-
-            <div id="applybuttons">
-                <button onclick="updateRpc()" class="button" style="background-color: #34eb83;">Start Rich Presence</button>
-                <button onclick="disconnectRpc()" class="button" style="background-color: #db4040" id="disconnect" disabled=true>Disconnect Rich Presence</button>
+            <div class="rpcpreview">
+                <p id="playinggame">Playing a game</p>
+                <div class="previewflexrow">
+                    <img src="../../public/images/Yellow.png" width="65" height="65">
+                    <div id="previewtext">
+                        <p id="clientname">Application Name</p>
+                        <p id="previewdetails" class="previewpelement">Competitive</p>
+                        <div id="stateandparty">
+                            <p id="previewstate" class="previewpelement">Playing Solo</p>
+                            <p id="party" class="previewpelement">(1 of 5)</p>
+                        </div>
+                        <p id="time" style="visibility: hidden;" class="previewpelement">00:00</p>
+                    </div>
+                </div>
+                <button id="asktojoin">
+                    <span>Ask to join</span>
+                </button>
             </div>
         </div>
-    </form>
+    </div>
 </body>
 </html>

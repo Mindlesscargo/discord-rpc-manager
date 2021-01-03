@@ -11,7 +11,8 @@ ul.navbar {
     padding: 0;
     margin: 0;
     overflow: hidden;
-    background-color: #340082;
+    background-color: #0d0d0d;
+    margin-bottom: 10px;
 }
 
 .navitem {
@@ -28,6 +29,6 @@ ul.navbar {
 
 
 .navitem a:hover{
-    background-color: #26015e;
+    background-color: #000000;
 }
 

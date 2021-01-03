@@ -40,6 +40,12 @@ ul.navbar {
     background-color: #000000;
 }
 
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
 #inputs {
     color: white;
     display: flex;
@@ -68,4 +74,109 @@ ul.navbar {
 .button {
     padding: 10px 14px;
     margin: 5px;
+}
+
+/* Preview CSS */
+
+.backgroundpreview {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 340px;
+    background-color:#7289da;
+    border-radius: 5px;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.profilepreview {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 170px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.profilepreview img {
+    border-radius: 50%;
+}
+
+.profilepreview p {
+    margin: 0px;
+
+}
+
+#nickname {
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 16;
+}
+
+#username {
+    font-weight: 400;
+    font-size: 14px
+}
+
+#playinggame {
+    font-size: 16;
+    font-weight: 600;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.rpcpreview {
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+    background-color: #6c82cf;
+    color: white;
+    margin-right: 0;
+    border-radius: 5px;
+}
+
+.previewflexrow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5px;
+    margin-left: 15px;
+}
+
+.previewpelement {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 0 2px;
+}
+
+#previewtext {
+    margin-left: 5px;
+}
+
+#stateandparty {
+    display: flex;
+    flex-direction: row;
+}
+
+#party {
+    margin-left: 5px;
+}
+
+#clientname {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 2px;
+}
+
+#asktojoin {
+    outline: none;
+    align-self: center;
+    width: 210px;
+    height: 32px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
 }
