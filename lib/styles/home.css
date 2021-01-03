@@ -7,9 +7,9 @@ body {
 
 input {
     border: 0;
-    font-size: 18px;
+    font-size: 1.25rem;
     outline: none;
-    border-radius: 5px;
+    border-radius: .313rem;
     box-shadow: none;
 }
 
@@ -20,7 +20,7 @@ ul.navbar {
     margin: 0;
     overflow: hidden;
     background-color: #0d0d0d;
-    margin-bottom: 10px;
+    margin-bottom: .625rem;
 }
 
 .navitem {
@@ -32,7 +32,7 @@ ul.navbar {
     color: #ffffff;
     text-align: center;
     text-decoration: none;
-    padding: 15px 15px
+    padding: .938rem .938rem
 }
 
 
@@ -57,14 +57,14 @@ ul.navbar {
 .inputcontainer {
     display: flex;
     flex-direction: row;
-    padding: 5px;
+    padding: .313rem;
 }
 
 .inputitem {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
+    padding: .625rem;
 }
 
 .inputitem label {
@@ -72,8 +72,8 @@ ul.navbar {
 }
 
 .button {
-    padding: 10px 14px;
-    margin: 5px;
+    padding: .625rem .875rem;
+    margin: .313rem;
 }
 
 /* Preview CSS */
@@ -81,19 +81,19 @@ ul.navbar {
 .backgroundpreview {
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 340px;
+    width: 15.625rem;
+    height: 21.25rem;
     background-color:#7289da;
-    border-radius: 5px;
+    border-radius: .313rem;
     align-self: center;
-    margin-left: 10px;
+    margin-left: .625rem;
 }
 
 .profilepreview {
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 170px;
+    width: 15.625rem;
+    height: 10.625rem;
     align-items: center;
     justify-content: center;
     color: white;
@@ -104,45 +104,45 @@ ul.navbar {
 }
 
 .profilepreview p {
-    margin: 0px;
+    margin: 0rem;
 
 }
 
 #nickname {
-    margin-top: 5px;
+    margin-top: .313rem;
     font-weight: 600;
-    font-size: 16;
+    font-size: 1rem;
 }
 
 #username {
     font-weight: 400;
-    font-size: 14px
+    font-size: .875rem
 }
 
 #playinggame {
-    font-size: 16;
+    font-size: 1rem;
     font-weight: 600;
-    margin-left: 15px;
-    margin-top: 15px;
+    margin-left: .938rem;
+    margin-top: .938rem;
     margin-bottom: 0;
 }
 
 .rpcpreview {
     display: flex;
     flex-direction: column;
-    height: 170px;
+    height: 10.625rem;
     background-color: #6c82cf;
     color: white;
     margin-right: 0;
-    border-radius: 5px;
+    border-radius: .313rem;
 }
 
 .previewflexrow {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 5px;
-    margin-left: 15px;
+    padding: .313rem;
+    margin-left: .938rem;
 }
 
 .previewpelement {
@@ -150,13 +150,13 @@ ul.navbar {
     white-space: nowrap;
     text-overflow: ellipsis;
     font-weight: 400;
-    font-size: 14px;
-    margin: 0 0 2px;
-    width: 160px;
+    font-size: .875rem;
+    margin: 0 0 .125rem;
+    width: 10rem;
 }
 
 #previewtext {
-    margin-left: 5px;
+    margin-left: .313rem;
 }
 
 #stateandparty {
@@ -165,22 +165,22 @@ ul.navbar {
 }
 
 #party {
-    margin-left: 5px;
+    margin-left: .313rem;
 }
 
 #clientname {
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 600;
-    margin: 0 0 2px;
+    margin: 0 0 .125rem;
 }
 
 #asktojoin {
     outline: none;
     align-self: center;
-    width: 210px;
-    height: 32px;
-    border: 1px solid white;
-    border-radius: 5px;
+    width: 13.125rem;
+    height: 2rem;
+    border: .063rem solid white;
+    border-radius: 5rem;
     color: white;
     background-color: transparent;
 }

@@ -8,9 +8,9 @@ body {
 
 input {
     border: 0;
-    font-size: 18px;
+    font-size: 1.125rem;
     outline: none;
-    border-radius: 5px;
+    border-radius: .313rem;
     box-shadow: none;
 }
 
@@ -21,7 +21,7 @@ ul.navbar {
     margin: 0;
     overflow: hidden;
     background-color: #0d0d0d;
-    margin-bottom: 10px;
+    margin-bottom: .625rem;
 }
 
 .navitem {
@@ -33,7 +33,7 @@ ul.navbar {
     color: #ffffff;
     text-align: center;
     text-decoration: none;
-    padding: 15px 15px
+    padding: .938rem .938rem
 }
 
 
@@ -54,6 +54,6 @@ ul.navbar {
 }
 
 #save {
-    padding: 10px 14px;
-    margin: 5px;
+    padding: .625rem .875rem;
+    margin: .313rem;
 }
