@@ -1,5 +1,6 @@
 # Discord RPC Manager
 A simple electron app to manage discord rich presence
+*Warning: This is not a proudction product. You may experience bugs in the setup or usage of this application*
 
 
 Start the program using `npm start`
