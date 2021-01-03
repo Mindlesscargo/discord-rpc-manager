@@ -11,7 +11,8 @@ ul.navbar {
     padding: 0;
     margin: 0;
     overflow: hidden;
-    background-color: #340082;
+    background-color: #0d0d0d;
+    margin-bottom: 10px;
 }
 
 .navitem {
@@ -28,29 +29,35 @@ ul.navbar {
 
 
 .navitem a:hover{
-    background-color: #26015e;
+    background-color: #000000;
 }
 
 #inputs {
     color: white;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    resize: none;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-#imageinputs {
-    padding: 10px 10px;
-    display: flex;
-    align-content: center;
-}
-
-#partyinput {
+.inputcontainer {
     display: flex;
     flex-direction: row;
+    padding: 5px;
 }
 
-#partylimit {
-    resize: none;
+.inputitem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.inputitem label {
+    align-self: center;
+}
+
+.button {
+    padding: 10px 14px;
+    margin: 5px;
 }
