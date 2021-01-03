@@ -146,9 +146,13 @@ ul.navbar {
 }
 
 .previewpelement {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-weight: 400;
     font-size: 14px;
     margin: 0 0 2px;
+    width: 160px;
 }
 
 #previewtext {
