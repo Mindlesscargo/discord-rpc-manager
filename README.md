@@ -1,8 +1,5 @@
-# Discord RPC Manager
+# Discord RPC Manager [Deprecated]
 A simple electron app to manage discord rich presence
-
-[Download Installer Here](https://assets.nekonii.xyz/downloads/discord-rich-presence-manager/setup.exe)
-
 
 Start the program using `npm start`
 
